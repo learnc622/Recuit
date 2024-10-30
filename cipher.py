@@ -7,14 +7,11 @@
 # 1
 
 # create a function that converts letters, numbers and symbols to their ascii numerics
-def convert_to_ascii(message):
-    converted = [ord(i) for i in message]
-    return converted
+convert_to_ascii = lambda message: [ord(i) for i in message]
 
-def revert_ascii(message):
-    # takes ascii numerics and converts back to their character representation
-    converted_message = "".join([chr(i) for i in message])
-    return converted_message
+# takes ascii numerics and converts back to their character representation
+revert_ascii = lambda message: "".join([chr(i) for i in message])
+
 
 # 2
 def encrypt(m, e, n):
@@ -59,7 +56,7 @@ def main():
     print("Welcome to simple RSA encryption")
     while True:
         print("1. Encrypt a file\n2. Decrypt a file\n3. Quit")
-        p = 1099503947
+        p = 61
         q = 53
         n = p * q
         phi_n = (p - 1) * (q - 1)
@@ -100,4 +97,3 @@ def main():
 print(main())
 
 
-#
